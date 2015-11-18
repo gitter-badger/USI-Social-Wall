@@ -7,7 +7,6 @@
 
 ##Description
 -
-
 This repository holds the work of 4 contributors with the aim to develop an API that will be used for the USI Social Wall.
 
 The project intends to implement a web application to create a visual aggregation of all relevant content available on the major social channels with the use of hashtags or keywords. 
