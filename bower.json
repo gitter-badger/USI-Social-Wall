@@ -1,0 +1,40 @@
+{
+  "name": "usi-social-wall",
+  "description": "Social Wall App for USI University",
+  "main": "app.js",
+  "authors": [{
+    "name": "Fraccaroli Gianmarco",
+    "email": "fraccg@usi.ch",
+    "url": "https://github.com/Fraccaman"
+  }, {
+    "name": "Cruz Alegría Samuel Adolfo",
+    "email": "cruzas@usi.ch",
+    "url": "https://github.com/cruzas"
+  }, {
+    "name": "Arrigo Francesco Simone",
+    "email": "arrigf@usi.ch",
+    "url": "https://github.com/framtk"
+  }, {
+    "name": "Calzana Marco",
+    "email": "calzam@usi.ch",
+    "url": "https://github.com/calzam"
+  }],
+  "license": "MIT",
+  "keywords": [
+    "social",
+    "wall",
+    "fb",
+    "twitter",
+    "yt"
+  ],
+  "homepage": "https://github.com/Fraccaman/USI-Social-Wall",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
