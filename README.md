@@ -12,7 +12,7 @@ This repository holds the work of 4 contributors with the aim to develop an API 
 The project intends to implement a web application to create a visual aggregation of all relevant content available on the major social channels with the use of hashtags or keywords. 
 The interface will alow the choice of various kinds of layouts and the possibility to integrate the result on web pages. The user can then view on his/her device all posts, photos and videos related to what is being searched and further restrict the content with filters.
 
-#Contact Us
+##Contact Us
 -
 Francesco Simone Arrigo: francesco.arrigo@usi.ch
 
