@@ -1,8 +1,8 @@
-# Team: Another Tweet In The Wall
+#Team: Another Tweet In The Wall
 =========
 
-USI-Social-Wall
-USI Web Service &amp; USI Social Media Board
+##USI-Social-Wall
+##USI Web Service &amp; USI Social Media Board
 =========
 
 Description
