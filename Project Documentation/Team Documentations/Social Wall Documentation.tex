@@ -1,0 +1,53 @@
+\documentclass[]{article}
+\usepackage{hyperref}
+\begin{document}
+
+\title{Social Wall Documentation}
+\author{Another Tweet In The Wall}
+\maketitle
+\textbf{Member}: Francesco Simone Arrigo, Marco Calzana, Samuel Adolfo Cruz Alegr\'{i}a, Gianmarco Fraccaroli 
+\begin{itemize}
+\subsection*{Work Division}
+\item Francesco Simone Arrigo: JS Client Side.
+\item Marco Calzana: Express/Socket Server Side.
+\item Samuel Adolfo Cruz Alegr\'{i}a: API Server Side.
+\item Gianmarco Fraccaroli: Stylus/HTML Client Side.
+\end{itemize}
+
+\subsection*{GitHub Repository}
+\url{https://github.com/Fraccaman/USI-Social-Wall.git}
+\section*{Implementation}
+The project intends to implement a web application to create a visual aggregation of all relevant content available on the major social channels with the use of hashtags or keywords. The interface will allow the choice of various kinds of layouts and the possibility to integrate the result on web pages. The user can then view on his/her device all posts, photos and videos related to what is being searched and further restrict such content with filters.
+\subsection{MUST HAVE}
+
+\begin{enumerate}
+\item Client sends a JSON body request (based on the user options/filters) to the server. The client has a unique ID locally stored. 
+\item Server checks the request and send the object to the right social API.
+\item API asks to the selected social with the selected filters.
+\item Server checks the API's answers, if necessary it apply options legated to the unique ID of the user, it sends a JSON to the client with a header for visualisation options.
+\item The client show the result with the right visualisation
+\item The server keeps track of news about the active clients, it asks every tot seconds to the API. If news it send a refresh to the client.
+\item Push a news should be nice to see.
+\item Client and server must close connection in a smart way. 
+\end{enumerate}
+
+\subsection*{Filters and Options}
+\begin{itemize}
+\item Filters: Facebook, Twitter.
+\item Filter Options: which hashtag, How many tweet, from which days
+\item User Options:  ask what "save parameter/characteristics" means
+\end{itemize}
+
+\section*{Questions we have to answer}
+\begin{itemize}
+\item How can a database implementation help.
+\item Which are the User Option linked to the unique ID? what "save parameter/characteristics" means.
+\item Which Filter Options we want to include.
+\item Which filter options the API have.
+ 
+\end{itemize}
+
+
+
+
+\end{document}
