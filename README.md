@@ -1,7 +1,8 @@
-# USI-Social-Wall
-USI Web Service &amp; USI Social Media Board
+# Team: Another Tweet In The Wall
+=========
 
-Team: Another Tweet In The Wall
+USI-Social-Wall
+USI Web Service &amp; USI Social Media Board
 =========
 
 Description
@@ -14,9 +15,11 @@ The interface will alow the choice of various kinds of layouts and the possibili
 
 Contact Us
 -
-
 Francesco Simone Arrigo: francesco.arrigo@usi.ch
+
 Gianmarco Fraccaroli: gianmarco.fraccaroli@usi.ch
+
 Marco Calzana: marco.calzana@usi.ch
+
 Samuel Adolfo Cruz Alegría: samuel.adolfo.cruz.alegria@usi.ch
 
