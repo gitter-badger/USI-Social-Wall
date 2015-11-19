@@ -14,10 +14,13 @@ router.all('/', middleware.supportedMethods('GET, OPTIONS'));
 // var pubsub = require('../../pubsub');
 
 
-router.get('/', function(req, res, next) {
-  //call the API
-  //send the result of the API
-  res.json("this is twitter");
+router.get('/:hashtag', function(req, res, next) {
+  var hashtag = req.params.hashtag
+  tweets = calltheAPI(hashtag)
+  res.json(tweets)
+
+  // res.render('partials/twitter', { title: 'Usi Social-Wall' });
  });
+
 
 module.exports = router;
