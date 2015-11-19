@@ -1,18 +1,22 @@
 var config = require('./config');
 var express = require('express');
+var app = express();
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var router = express.Router();
 
 // Connect to MongoDB here
 var mongoose   = require('mongoose');
 mongoose.connect(config.mongoUrl + config.mongoDbName);
 
-// models
 
-var app = express();
+// WE NEED TO CHANGE THIS
+app.get('/', function(req, res) {
+  res.render('partials/index', { title: 'Usi Social-Wall' });
+});
 
 var env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
@@ -66,5 +70,11 @@ app.use(function(err, req, res, next) {
         title: 'error'
     });
 });
+
+// var routers = require('./routes/routers');
+// app.use('/', routers.root);
+
+
+
 
 module.exports = app;
