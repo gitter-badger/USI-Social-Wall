@@ -10,9 +10,11 @@ var bodyParser = require('body-parser');
 var mongoose   = require('mongoose');
 mongoose.connect(config.mongoUrl + config.mongoDbName);
 
-// models
-
 var app = express();
+
+var routers = require('./routes/routers');
+app.use('/', routers.root);
+app.use('/twitter',routers.twitter);
 
 var env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
