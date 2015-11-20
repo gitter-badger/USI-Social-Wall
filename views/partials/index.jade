@@ -1,8 +1,9 @@
 include ../base/header
   script.
     var pageLoader = function() {
-        var social = window.event.target.className + '/';
+        var social = window.event.target.className + '/%23';
         var tag = document.getElementById('hashtag').value;
+        //- var value = document.getElementById('date').value; TEMPLATE FOR DATE
         window.location = social + tag;
     }
   block content
