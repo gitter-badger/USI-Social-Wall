@@ -15,12 +15,10 @@ var router = express.Router();
 
 
 // WE NEED TO CHANGE THIS
-app.get('/', function(req, res) {
-  res.render('partials/index', { title: 'Usi Social-Wall' });
-});
 var routers = require('./routes/routers');
 app.use('/', routers.root);
 app.use('/twitter',routers.twitter);
+app.use('/twitter2',routers.twitter2);
 
 var env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
