@@ -13,18 +13,8 @@ var router = express.Router();
 // var mongoose   = require('mongoose');
 // mongoose.connect(config.mongoUrl + config.mongoDbName);
 
-<<<<<<< HEAD
 var app = express();
-=======
 
-// WE NEED TO CHANGE THIS
-app.get('/', function(req, res) {
-  res.render('partials/index', { title: 'Usi Social-Wall' });
-});
-var routers = require('./routes/routers');
-app.use('/', routers.root);
-app.use('/twitter',routers.twitter);
->>>>>>> master
 
 var routers = require('./routes/routers');
 app.use('/', routers.root);
@@ -46,8 +36,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/public')));
-<<<<<<< HEAD
-=======
+
 app.use(methodOverride(
 function(req, res){
   if (req.body && typeof req.body === 'object' && '_method' in req.body) {
@@ -57,11 +46,7 @@ function(req, res){
   }
 }
 ));
->>>>>>> master
 
-// routes
-var routers = require('./routes/routers');
-app.use('/', routers.root);
 
 
 /// catch 404 and forward to error handler

@@ -43,11 +43,7 @@
     "tests"
   ],
   "dependencies": {
-<<<<<<< HEAD
     "normalize-css": "normalize.css#~3.0.3",
-=======
-    "normalize-css": "normalize.css#~3.0.3"
->>>>>>> master
     "bootstrap": "~3.3.5",
     "font-awesome": "fontawesome#~4.4.0"
   }
