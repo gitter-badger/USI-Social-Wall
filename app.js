@@ -88,7 +88,6 @@ app.use(function(err, req, res, next) {
 
 var routers = require('./routes/routers');
 app.use('/', routers.root);
-// var twitter = require('./routes/twitter/router');
 app.use('/twitter',routers.twitter);
 
 module.exports = app;
