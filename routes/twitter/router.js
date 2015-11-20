@@ -26,14 +26,13 @@ router.get('/:hashtag', function (req, res, next) {
     null,
     'HMAC-SHA1'
   );
-  console.log('after oauth')
   oauth.get(
     'https://api.twitter.com/1.1/search/tweets.json?q='+hashtag.replace(/#/g,'%23')+"&count=20",
     '4226994315-eDbzpMKJ6rOTNBP24n9cvaAOpxK5QaOh1dZzAkP',
     'nUB3f2yCpz3VRVAgCttiS1r1UyNsZxddhzOJ5nt3evckr',
     function (e, data, response) {
       if (e) console.log(e)
-      res.render(data)
+      res.write(data)
       res.end()
     });
 });
