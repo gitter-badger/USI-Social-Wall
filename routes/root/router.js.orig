@@ -7,6 +7,13 @@ var middleware =  require('../middleware');
 var rootUrl = require("../../config").url;
 
 
+<<<<<<< HEAD
+//list users
+router.get('/', function(req, res, next) {
+	res.render('partials/index', { title: 'Usi Social-Wall' });
+    // res.render('index');
+  
+=======
 //supported methods
 router.all('/', middleware.supportedMethods('GET, OPTIONS'));
 
@@ -15,6 +22,7 @@ router.get('/', function(req, res, next) {
 
   res.render('partials/index');
 
+>>>>>>> fraccaroli
 });
 /** router for /users */
 module.exports = router;

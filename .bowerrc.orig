@@ -1,0 +1,8 @@
+{
+<<<<<<< HEAD
+ "directory": "public/components",
+ "json": "bower.json"
+=======
+  "directory": "public/components"
+>>>>>>> fraccaroli
+}

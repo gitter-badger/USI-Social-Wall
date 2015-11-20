@@ -8,11 +8,9 @@ var gulp = require('gulp'),
   autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('stylus', function () {
-  gulp.src('./public/css/stylus/**/*.styl')
+  gulp.src('./public/css/stylus/**/*')
     .pipe(plumber())
-    .pipe(stylus({
-      'include css': true
-    }))
+    .pipe(stylus())
     .pipe(gulp.dest('./public/css'))
     .pipe(livereload());
 });
