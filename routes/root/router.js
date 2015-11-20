@@ -13,7 +13,7 @@ router.all('/', middleware.supportedMethods('GET, OPTIONS'));
 //list users
 router.get('/', function(req, res, next) {
 
-  res.render('partials/index');
+  res.render('partials/dashboard');
 
 });
 /** router for /users */
