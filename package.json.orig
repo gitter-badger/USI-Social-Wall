@@ -14,8 +14,13 @@
     "method-override": "^2.3.5",
     "mongoose": "^4.2.5",
     "morgan": "^1.6.1",
+<<<<<<< HEAD
+    "serve-favicon": "^2.3.0",
+    "twit": "^2.1.1"
+=======
     "oauth": "^0.9.14",
     "serve-favicon": "^2.3.0"
+>>>>>>> fraccaroli
   },
   "devDependencies": {
     "gulp": "^3.9.0",

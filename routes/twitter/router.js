@@ -10,7 +10,11 @@ var config = require("../../config");
 router.all('/', middleware.supportedMethods('GET, OPTIONS'));
 
 router.get('/',function(req,res,next){
+<<<<<<< HEAD
   res.write('twitter route')
+=======
+  res.render('partials/twitter')
+>>>>>>> master
   res.end()
 })
 
@@ -26,7 +30,10 @@ router.get('/:hashtag', function (req, res, next) {
     null,
     'HMAC-SHA1'
   );
+<<<<<<< HEAD
   console.log('after oauth')
+=======
+>>>>>>> master
   oauth.get(
     'https://api.twitter.com/1.1/search/tweets.json?q='+hashtag.replace(/#/g,'%23')+"&count=20",
     '4226994315-eDbzpMKJ6rOTNBP24n9cvaAOpxK5QaOh1dZzAkP',

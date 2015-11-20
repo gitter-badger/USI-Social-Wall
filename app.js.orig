@@ -14,17 +14,14 @@ var router = express.Router();
 // mongoose.connect(config.mongoUrl + config.mongoDbName);
 
 <<<<<<< HEAD
-var app = express();
-=======
 
 // WE NEED TO CHANGE THIS
 app.get('/', function(req, res) {
   res.render('partials/index', { title: 'Usi Social-Wall' });
 });
-var routers = require('./routes/routers');
-app.use('/', routers.root);
-app.use('/twitter',routers.twitter);
->>>>>>> master
+=======
+var app = express();
+>>>>>>> fraccaroli
 
 var routers = require('./routes/routers');
 app.use('/', routers.root);
@@ -45,9 +42,8 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '/public')));
 <<<<<<< HEAD
-=======
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride(
 function(req, res){
   if (req.body && typeof req.body === 'object' && '_method' in req.body) {
@@ -57,7 +53,9 @@ function(req, res){
   }
 }
 ));
->>>>>>> master
+=======
+app.use(express.static(path.join(__dirname, '/public')));
+>>>>>>> fraccaroli
 
 // routes
 var routers = require('./routes/routers');
@@ -96,5 +94,14 @@ app.use(function(err, req, res, next) {
         title: 'error'
     });
 });
+
+// var routers = require('./routes/routers');
+// app.use('/', routers.root);
+
+
+
+var routers = require('./routes/routers');
+app.use('/', routers.root);
+app.use('/twitter',routers.twitter);
 
 module.exports = app;
