@@ -6,17 +6,30 @@ var router = express.Router();
 var middleware = require('../middleware');
 var OAuth = require('oauth');
 var config = require("../../config");
+<<<<<<< HEAD
+
+router.all('/', middleware.supportedMethods('GET, OPTIONS'));
+
+router.get('/',function(req,res,next){
+  res.render('partials/twitter')
+=======
 var R = require("request");
 
 router.all('/', middleware.supportedMethods('GET, OPTIONS'));
 
 router.get('/', function (req, res, next) {
   res.write('ciao twitter2')
+>>>>>>> fraccaroli
   res.end()
 })
 
 router.get('/:hashtag', function (req, res, next) {
   var hashtag = req.params.hashtag
+<<<<<<< HEAD
+});
+
+
+=======
   var OAuth2 = OAuth.OAuth2;
   // var twitterConsumerKey = 'your key';
   // var twitterConsumerSecret = 'your secret';
@@ -53,8 +66,7 @@ router.get('/:hashtag', function (req, res, next) {
     });
 
 });
-
-
+>>>>>>> fraccaroli
 
 
 module.exports = router;
