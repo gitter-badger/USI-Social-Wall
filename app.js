@@ -29,9 +29,11 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 // routes
+var routers = require('./routes/routers');
+app.use('/', routers.root);
 
 
 /// catch 404 and forward to error handler

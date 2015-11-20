@@ -1,9 +1,15 @@
 include ../base/header
 
   block content
-
-    | Insert the hashtag you want to search
-    br
-    input(type='text', name='hashtag')
-    br
-    button(type='button', onclick='history.go(0)') Search
+    div.fluid-container#top-menu
+      div.row
+        div.col-xs-8.pull-left.list-inline
+          img#logo-menu(src="/img/logo.png")
+          span.text-left Usi Social Wall App
+        div.col-xs-4.pull-right
+          p.text-right here goes the date
+    div.fluid-container
+      div#sidebar
+      div.container
+        div.row
+include ../base/footer
