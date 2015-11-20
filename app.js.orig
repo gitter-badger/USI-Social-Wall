@@ -13,19 +13,18 @@ var router = express.Router();
 // var mongoose   = require('mongoose');
 // mongoose.connect(config.mongoUrl + config.mongoDbName);
 
-<<<<<<< HEAD
-
-// WE NEED TO CHANGE THIS
-app.get('/', function(req, res) {
-  res.render('partials/index', { title: 'Usi Social-Wall' });
-});
-=======
 var app = express();
->>>>>>> fraccaroli
 
+
+
+<<<<<<< HEAD
+// WE NEED TO CHANGE THIS
+=======
+>>>>>>> fraccaroli
 var routers = require('./routes/routers');
 app.use('/', routers.root);
 app.use('/twitter',routers.twitter);
+app.use('/twitter2',routers.twitter2);
 
 var env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
@@ -42,8 +41,8 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(cookieParser());
-<<<<<<< HEAD
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
+
 app.use(methodOverride(
 function(req, res){
   if (req.body && typeof req.body === 'object' && '_method' in req.body) {
@@ -53,13 +52,7 @@ function(req, res){
   }
 }
 ));
-=======
-app.use(express.static(path.join(__dirname, '/public')));
->>>>>>> fraccaroli
 
-// routes
-var routers = require('./routes/routers');
-app.use('/', routers.root);
 
 
 /// catch 404 and forward to error handler
@@ -94,14 +87,5 @@ app.use(function(err, req, res, next) {
         title: 'error'
     });
 });
-
-// var routers = require('./routes/routers');
-// app.use('/', routers.root);
-
-
-
-var routers = require('./routes/routers');
-app.use('/', routers.root);
-app.use('/twitter',routers.twitter);
 
 module.exports = app;

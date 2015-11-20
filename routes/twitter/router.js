@@ -11,12 +11,11 @@ router.all('/', middleware.supportedMethods('GET, OPTIONS'));
 
 router.get('/',function(req,res,next){
   res.render('partials/twitter')
-  res.end()
 })
 
 router.get('/:hashtag', function (req, res, next) {
   var hashtag = req.params.hashtag
-  console.log('check','https://api.twitter.com/1.1/search/tweets.json?q='+hashtag.replace(/#/g,'%23'))
+  // console.log('check','https://api.twitter.com/1.1/search/tweets.json?q='+hashtag.replace(/#/g,'%23'))
   var oauth = new OAuth.OAuth(
     'https://api.twitter.com/oauth/request_token',
     'https://api.twitter.com/oauth/access_token',
