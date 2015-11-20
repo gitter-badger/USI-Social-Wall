@@ -10,7 +10,7 @@ var config = require("../../config");
 router.all('/', middleware.supportedMethods('GET, OPTIONS'));
 
 router.get('/',function(req,res,next){
-  res.write('twitter route')
+  res.render('partials/twitter')
   res.end()
 })
 
@@ -33,7 +33,7 @@ router.get('/:hashtag', function (req, res, next) {
     'nUB3f2yCpz3VRVAgCttiS1r1UyNsZxddhzOJ5nt3evckr',
     function (e, data, response) {
       if (e) console.log(e)
-      res.write(data)
+      res.render(data)
       res.end()
     });
 });
