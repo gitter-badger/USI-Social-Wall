@@ -1,5 +1,6 @@
 // Import base
 @import "base/_base";
 // Import partials
-@import "partials/_dashboard";
-@import "partials/_sidebar";
+@import "partials/_dashboard-navbar";
+@import "partials/_dashboard-sidebar";
+@import "partials/_dashboard-content";
