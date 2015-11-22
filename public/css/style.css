@@ -3,6 +3,10 @@ body {
   font-weight: 300;
   background-color: #ccc; }
 
+.active {
+  padding-top: 20px;
+  background-color: #34425A; }
+
 #navbar {
   height: 70px; }
   #navbar #logo-box {
@@ -37,9 +41,6 @@ body {
     #sidebar #menu li {
       padding: 15px;
       width: 100%; }
-      #sidebar #menu li:first-child {
-        padding-top: 20px;
-        background-color: #34425A; }
       #sidebar #menu li a {
         text-align: center;
         color: #fff;
