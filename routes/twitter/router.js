@@ -12,7 +12,7 @@ router.all('/', middleware.supportedMethods('GET, OPTIONS'));
 router.get('/',function(req,res,next){
  res.render('partials/twitter')
 })
- 
+
 router.get('/:hashtag', function (req, res, next) {
  var hashtag = req.params.hashtag;
  getJeson.getJeson(res, hashtag);
