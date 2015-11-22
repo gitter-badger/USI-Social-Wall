@@ -21,7 +21,7 @@ var routers = require('./routes/routers');
 app.use('/', routers.root);
 app.use('/twitter',routers.twitter);
 app.use('/twitter2',routers.twitter2);
-// app.use('/youtube',routers.youtube);
+app.use('/youtube',routers.youtube);
 
 var env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
