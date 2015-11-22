@@ -26,7 +26,7 @@ router.get('/:hashtag', function (req, res, next) {
   search(hashtag, opts, function(err, results) {
     if(err) return console.log(err);
     console.dir(results)
-    res.write(JSON.stringify(results));
+    res.json(results);
   });
 
 });
