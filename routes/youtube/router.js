@@ -10,7 +10,6 @@ var R = require("request");
 var search = require('youtube-search');
 var opts = {
   maxResults: 20,
-  key: 'AIzaSyBnRP4hwJoRqgbmL027mBcu-tY0SQJHm6o'
   key: 'AIzaSyD_OCg4U-uwU83Tev7mLfPEzknRCD4Q-XU'    // server key
 };
 
