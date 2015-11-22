@@ -16,7 +16,6 @@ try{
     if(stats.isDirectory()){
       try{
         var router = require(base +  dirEntry + '/router');
-        //add router to our list of routers;
         routers[dirEntry] = router;
       }catch(err){
         console.log('Could not get router for ' + dirEntry);
@@ -27,7 +26,6 @@ try{
 }catch(err){
   console.log('Error while loading routers');
   console.log(err.stack);
-  //We don't know what happened, export empty object
   routers = {}
 }finally{
   module.exports = routers;

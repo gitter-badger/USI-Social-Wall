@@ -6,7 +6,6 @@ var router = express.Router();
 var middleware = require('../middleware');
 var OAuth = require('oauth');
 var config = require("../../config");
-<<<<<<< HEAD
 var R = require("request");
 
 router.all('/', middleware.supportedMethods('GET, OPTIONS'));
@@ -15,7 +14,7 @@ router.get('/', function (req, res, next) {
   res.write('ciao youtube')
   res.end()
 })
-=======
+
 var search = require('youtube-search');
 var opts = {
   maxResults: 20,
@@ -52,4 +51,3 @@ router.get('/:hashtag', function (req, res, next) {
 
 
 module.exports = router;
->>>>>>> cruz
