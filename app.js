@@ -15,8 +15,6 @@ var router = express.Router();
 
 var app = express();
 
-
-
 var routers = require('./routes/routers');
 app.use('/', routers.root);
 app.use('/twitter',routers.twitter);

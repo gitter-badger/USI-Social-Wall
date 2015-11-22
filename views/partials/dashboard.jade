@@ -9,18 +9,19 @@ include ../base/header
           span.pull-right Welcome to the USI Social Wall App!
     div#sidebar
       ul#menu
-        li.box
+        li#settings.box
           a(href="/")
             i.fa.fa-wrench.fa-2x
             p Settings
-        li.box
-          a(href="/")
+        li#api.box
+          a(onclick="renderAPI()")
             i.fa.fa-database.fa-2x
             p Api
+        li#graphs.box
+            a(href="/")
+                i.fa.fa-bar-chart.fa-2x
+                p Graphs
     div#content.container-fluid
-        //- li.box
-        //-   a(href="/")
-        //-     i.fa.fa-bar-chart.fa-2x
-        //-     p Graphs
+    
     
 include ../base/footer

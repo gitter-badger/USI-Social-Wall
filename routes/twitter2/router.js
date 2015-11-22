@@ -11,8 +11,7 @@ var R = require("request");
 router.all('/', middleware.supportedMethods('GET, OPTIONS'));
 
 router.get('/', function (req, res, next) {
-  res.write('ciao twitter2')
-  res.end()
+  res.render('partials/twitter')
 })
 
 router.get('/:hashtag', function (req, res, next) {
@@ -31,7 +30,7 @@ router.get('/:hashtag', function (req, res, next) {
       'grant_type': 'client_credentials'
     },
     function (e, access_token, refresh_token, results) {
-      var url = 'https://api.twitter.com/1.1/search/tweets.json?q='+hashtag.replace(/#/g,'%23')+'&count=20';
+      var url = 'https://api.twitter.com/1.1/search/tweets.json?q=' + hashtag.replace(/#/g, '%23') + '&count=20';
       var bearerToken = access_token; //the bearer token obtained from the last script
 
       R({
