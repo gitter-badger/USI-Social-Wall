@@ -1,4 +1,4 @@
-/** @module routes/routers 
+/** @module routes/routers
 * Exposes all routers
 */
 'use strict';
@@ -11,14 +11,11 @@ var routers = {};
 
 try{
   dirEntries.forEach(function(dirEntry){
-
     var stats =  fs.statSync(base + dirEntry);
     //try to load router of dir
     if(stats.isDirectory()){
       try{
-
         var router = require(base +  dirEntry + '/router');
-
         //add router to our list of routers;
         routers[dirEntry] = router;
       }catch(err){
@@ -35,4 +32,3 @@ try{
 }finally{
   module.exports = routers;
 }
-

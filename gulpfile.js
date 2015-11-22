@@ -2,20 +2,22 @@ var gulp = require('gulp'),
   nodemon = require('gulp-nodemon'),
   plumber = require('gulp-plumber'),
   livereload = require('gulp-livereload'),
-  stylus = require('gulp-stylus'),
+  sass = require('gulp-sass'),
   csso = require('gulp-csso'),
   shorthand = require('gulp-shorthand'),
   autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('stylus', function () {
-  gulp.src('./public/css/stylus/**/*.styl')
-    .pipe(plumber())
-    .pipe(stylus({
-      'include css': true
-    }))
-    .pipe(gulp.dest('./public/css'))
-    .pipe(livereload());
-});
+  gulp.task('sass', function () {
+    gulp.src('./public/css/sass/**/*.scss')
+      .pipe(sass().on('error', sass.logError))
+      .pipe(gulp.dest('./public/css'))
+      .pipe(livereload());
+  });
+
+  gulp.task('watch', function () {
+    livereload.listen();
+    gulp.watch('./public/css/sass/**/*.scss', ['sass']);
+  });
 
 gulp.task('css', function () {
   gulp.src('./public/css/style.css')
@@ -28,10 +30,6 @@ gulp.task('css', function () {
     .pipe(csso())
     .pipe(gulp.dest('./public/css'));
 })
-
-gulp.task('watch', function () {
-  gulp.watch('./public/css/stylus/**/*.styl', ['stylus']);
-});
 
 gulp.task('develop', function () {
   livereload.listen();
@@ -51,7 +49,7 @@ gulp.task('develop', function () {
 });
 
 gulp.task('default', [
-  'stylus',
+  'sass',
   'develop',
   'watch'
 ]);

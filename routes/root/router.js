@@ -7,11 +7,14 @@ var middleware =  require('../middleware');
 var rootUrl = require("../../config").url;
 
 
+//supported methods
+router.all('/', middleware.supportedMethods('GET, OPTIONS'));
+
 //list users
 router.get('/', function(req, res, next) {
-	res.render('partials/index', { title: 'Usi Social-Wall' });
-    // res.render('index');
-  
+
+  res.render('partials/dashboard');
+
 });
 /** router for /users */
 module.exports = router;

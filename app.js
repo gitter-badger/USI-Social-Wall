@@ -13,11 +13,14 @@ var router = express.Router();
 // var mongoose   = require('mongoose');
 // mongoose.connect(config.mongoUrl + config.mongoDbName);
 
+var app = express();
 
-// WE NEED TO CHANGE THIS
-app.get('/', function(req, res) {
-  res.render('partials/index', { title: 'Usi Social-Wall' });
-});
+
+
+var routers = require('./routes/routers');
+app.use('/', routers.root);
+app.use('/twitter',routers.twitter);
+app.use('/twitter2',routers.twitter2);
 
 var env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
@@ -34,7 +37,8 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
+
 app.use(methodOverride(
 function(req, res){
   if (req.body && typeof req.body === 'object' && '_method' in req.body) {
@@ -45,7 +49,6 @@ function(req, res){
 }
 ));
 
-// routes
 
 
 /// catch 404 and forward to error handler
@@ -80,15 +83,5 @@ app.use(function(err, req, res, next) {
         title: 'error'
     });
 });
-
-// var routers = require('./routes/routers');
-// app.use('/', routers.root);
-
-
-
-var routers = require('./routes/routers');
-app.use('/', routers.root);
-// var twitter = require('./routes/twitter/router');
-app.use('/twitter',routers.twitter);
 
 module.exports = app;
