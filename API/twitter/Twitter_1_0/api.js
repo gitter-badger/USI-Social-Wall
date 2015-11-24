@@ -3,8 +3,8 @@
 
 var express = require('express');
 var OAuth = require('oauth');
-var config = require("../../config");
-var twitterRouter = require("../../routes/twitter/router")
+var config = require("../../../config");
+var twitterRouter = require("../../../routes/twitter/router")
 
 
 

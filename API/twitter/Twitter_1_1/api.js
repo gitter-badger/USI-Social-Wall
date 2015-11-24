@@ -3,9 +3,9 @@
 
 var express = require('express');
 var OAuth = require('oauth');
-var config = require("../../config");
+var config = require("../../../config");
 var R = require("request");
-var twitterRouter = require("../../routes/twitter/router")
+var twitterRouter = require("../../../routes/twitter/router")
 
 
 module.exports.getJeson = function(res, hashtag){
