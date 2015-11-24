@@ -17,8 +17,14 @@ fs.readdirSync(__dirname).forEach(function(file) {
             var path = file+ '/' + dir;
             var subStatic = fs.statSync(path);
             if (subStatic && subStatic.isDirectory()) {
-                var module = require(path + '/api');
-                API[dir] = module;
+                try{
+                    var module = require(path + '/api');
+                    API[dir] = module;
+                }catch(err){
+                    console.log('Could not get api for ' + dir);
+                    console.log(err.toString() + err.stack);
+
+                }
             }
         });
     }
