@@ -2,7 +2,6 @@
 'use strict';
 
 var express = require('express');
-var router = express.Router();
 var OAuth = require('oauth');
 var config = require("../../config");
 var twitterRouter = require("../../routes/twitter/router")
@@ -18,7 +17,7 @@ module.exports.getJeson = function(res, hashtag){
 		config.twitter1.standardValue,
 		function (e, data, response) {
 			if (e) console.log(e)
-			twitterRouter.sendData(res, data);
+			twitterRouter.sendData(res, JSON.parse(data));
 		});
 
 }

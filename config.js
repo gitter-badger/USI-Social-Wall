@@ -22,6 +22,17 @@ module.exports = {
 	 	),
 	 	standardKey : '4226994315-eDbzpMKJ6rOTNBP24n9cvaAOpxK5QaOh1dZzAkP',
 	 	standardValue :'nUB3f2yCpz3VRVAgCttiS1r1UyNsZxddhzOJ5nt3evckr'
+	},
+	//oauth for Twitter API 1.1
+	twitter2 : {
+		oauth2 : new OAuth.OAuth2(
+			'ohb9GbS1FS1zGxwjz1LvF4sQR',
+    		"Z3jc8wKNooT82QfMfQBkpoDegJGEcQnCwwKXfhh8iFauhe15F5",
+    		'https://api.twitter.com/',
+		    null,
+		    'oauth2/token',
+		    null
+		)
 	}
 }
 
