@@ -2,11 +2,10 @@
 'use strict';
 
 var R = require("request");
-var twitterExts = require("../APIclassForTwitter")
+var twitterExts = require("../APIclassForTwitter");
 var config = twitterExts.config;
 var OAuth = twitterExts.OAuth;
-
-var twitterRouter = require("../../../routes/twitter/router")
+var Twitter_1_1 = twitterExts.APIparser.Twitter_1_1;
 
 
 
@@ -14,6 +13,7 @@ module.exports.getJson = function(res, hashtag, options){
   // var OAuth2 = OAuth.OAuth2;
   // var twitterConsumerKey = 'your key';
   // var twitterConsumerSecret = 'your secret';
+  console.log("enter2")
   var oauth2 = config.twitter2.oauth2
   
   oauth2.getOAuthAccessToken(
@@ -36,7 +36,9 @@ module.exports.getJson = function(res, hashtag, options){
         }
 
       }, function (err, resp, body) {
-        twitterRouter.sendData(res, body)
+        
+        Twitter_1_1.parseData(res, body,options);
+        console.log("out2")
 
       });
     });

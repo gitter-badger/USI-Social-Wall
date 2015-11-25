@@ -8,7 +8,6 @@ var APIclass = require("../APIclass");
 var twitterExtensions = {
     config : APIclass.config,
     OAuth : require('oauth'),
-    APIparser : APIclass.APIparser,
     APIclass : APIclass
 }
 

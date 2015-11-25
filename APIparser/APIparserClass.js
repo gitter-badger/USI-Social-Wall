@@ -3,8 +3,7 @@
 */
 'use strict';
 var apiExtensions = {
-    config : require("../config"),
-    APIparser : require("../APIparser/APIparser")
+    config : require("../config")
 }
 
 
