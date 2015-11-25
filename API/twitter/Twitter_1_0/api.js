@@ -10,7 +10,7 @@ var twitterRouter = require("../../../routes/twitter/router")
 // console.log("eeeeeiiiiii  ", config.routers)
 
 
-module.exports.getJeson = function(res, hashtag){
+module.exports.getJson = function(res, hashtag, options){
  // console.log('check','https://api.twitter.com/1.1/search/tweets.json?q='+hashtag.replace(/#/g,'%23'))
 	var oauth = config.twitter1.oauth1;
 	oauth.get(

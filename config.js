@@ -2,13 +2,16 @@ var OAuth = require('oauth');
 // var routers = require('./routes/routers');
 
 module.exports = {
+
+	global : {
   	// MongoDB
   	// Url of the Mongodb server
-	mongoUrl: "mongodb://localhost/",
+		mongoUrl: "mongodb://localhost/",
  	// Database name
-  	mongoDbName: "test-2",
+  		mongoDbName: "test-2",
   	//Server URL
-  	url: "http://127.0.0.1:3000",
+  		url: "http://127.0.0.1:3000"
+  	},
 
   	//oauth for Twitter API 1.0
   	twitter1 : {

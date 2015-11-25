@@ -23,12 +23,12 @@ router.get('/:hashtag', function (req, res, next) {
     if (urlQuery.version == '1.0'){
     	var Twitter_1_0 = API.Twitter_1_0;
     	console.log("Twitter API version 1.0")
- 		Twitter_1_0.getJeson(res, hashtag);
+ 		Twitter_1_0.getJson(res, hashtag, {});
  	}
  	else{
  		var Twitter_1_1 = API.Twitter_1_1;
  		console.log("Twitter API version 1.1")
- 		Twitter_1_1.getJeson(res, hashtag)
+ 		Twitter_1_1.getJson(res, hashtag, {})
  	}
 });
 

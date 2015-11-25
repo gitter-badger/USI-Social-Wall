@@ -1,17 +1,16 @@
 /** @module albums/router */
 'use strict';
 
-// var express = require('express');
-// var OAuth = require('oauth');
-// var config = require("../../../config");
 var R = require("request");
-var twitterRouter = require("../../../routes/twitter/router")
 var twitterExts = require("../APIclassForTwitter")
 var config = twitterExts.config;
 var OAuth = twitterExts.OAuth;
 
+var twitterRouter = require("../../../routes/twitter/router")
 
-module.exports.getJeson = function(res, hashtag){
+
+
+module.exports.getJson = function(res, hashtag, options){
   // var OAuth2 = OAuth.OAuth2;
   // var twitterConsumerKey = 'your key';
   // var twitterConsumerSecret = 'your secret';
