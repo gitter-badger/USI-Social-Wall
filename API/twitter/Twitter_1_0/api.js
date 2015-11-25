@@ -1,11 +1,13 @@
 
 'use strict';
 
-var express = require('express');
-var OAuth = require('oauth');
-var config = require("../../../config");
+var twitterExts = require("../APIclassForTwitter")
+var config = twitterExts.config;
+var OAuth = twitterExts.OAuth;
+
 var twitterRouter = require("../../../routes/twitter/router")
 
+// console.log("eeeeeiiiiii  ", config.routers)
 
 
 module.exports.getJeson = function(res, hashtag){

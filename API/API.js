@@ -4,7 +4,6 @@
 'use strict';
 
 var fs = require('fs');
-var base = __dirname + '/';
 var API = {};
 console.log("API.js        ......         !!!!!!!!")
 
@@ -23,13 +22,12 @@ fs.readdirSync(__dirname).forEach(function(file) {
                 }catch(err){
                     console.log('Could not get api for ' + dir);
                     console.log(err.toString() + err.stack);
-
                 }
             }
         });
     }
 });
-
+console.log(API)
 module.exports = API;
 
 

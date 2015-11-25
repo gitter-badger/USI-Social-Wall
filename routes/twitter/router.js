@@ -34,7 +34,7 @@ router.get('/:hashtag', function (req, res, next) {
 
 module.exports.sendData = function(res, data){
 
-	console.log(data.statuses[0].text)
+	// console.log(data.statuses[0].text)
 	res.write(JSON.stringify(data))
 	res.end();
 }

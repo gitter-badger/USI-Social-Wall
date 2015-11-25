@@ -1,4 +1,5 @@
 var OAuth = require('oauth');
+// var routers = require('./routes/routers');
 
 module.exports = {
   	// MongoDB
@@ -23,6 +24,7 @@ module.exports = {
 	 	standardKey : '4226994315-eDbzpMKJ6rOTNBP24n9cvaAOpxK5QaOh1dZzAkP',
 	 	standardValue :'nUB3f2yCpz3VRVAgCttiS1r1UyNsZxddhzOJ5nt3evckr'
 	},
+
 	//oauth for Twitter API 1.1
 	twitter2 : {
 		oauth2 : new OAuth.OAuth2(

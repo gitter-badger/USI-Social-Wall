@@ -1,11 +1,14 @@
 /** @module albums/router */
 'use strict';
 
-var express = require('express');
-var OAuth = require('oauth');
-var config = require("../../../config");
+// var express = require('express');
+// var OAuth = require('oauth');
+// var config = require("../../../config");
 var R = require("request");
 var twitterRouter = require("../../../routes/twitter/router")
+var twitterExts = require("../APIclassForTwitter")
+var config = twitterExts.config;
+var OAuth = twitterExts.OAuth;
 
 
 module.exports.getJeson = function(res, hashtag){
