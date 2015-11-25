@@ -117,7 +117,6 @@ var myYoutubeSearch = function (keyword, options, cback) {
           thumbnails: item.snippet.thumbnails
         }
       })
-
       /*
        * var pageInfo = {
        *  totalResults: result.pageInfo.totalResults,
@@ -126,7 +125,6 @@ var myYoutubeSearch = function (keyword, options, cback) {
        * return cback(null, findings, pageInfo) - I think it is not required for us to display pageInfo.
        * Leaving it there just in case..
        */
-
       return cback(null, findings)
     } catch(e) {
       return cback(e)
