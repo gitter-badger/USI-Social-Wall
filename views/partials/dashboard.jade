@@ -1,0 +1,27 @@
+include ../base/header
+  
+  block content
+    div#navbar.container-fluid
+      div.row.text-center
+        div#logo-box
+          a(href="/")#logo USI Social Wall
+        div#navbar-menu
+          span.pull-right Welcome to the USI Social Wall App!
+    div#sidebar
+      ul#menu
+        li#settings.box
+          a(href="/")
+            i.fa.fa-wrench.fa-2x
+            p Settings
+        li#api.box
+          a(onclick="renderAPI()")
+            i.fa.fa-database.fa-2x
+            p Api
+        li#graphs.box
+            a(href="/")
+                i.fa.fa-bar-chart.fa-2x
+                p Graphs
+    div#content.container-fluid
+    
+    
+include ../base/footer

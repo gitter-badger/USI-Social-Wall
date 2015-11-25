@@ -1,9 +1,21 @@
 include ../base/header
-
+  script.
+    var pageLoader = function() {
+        var social = window.event.target.className + '/%23';
+        var tag = document.getElementById('hashtag').value;
+        //- var value = document.getElementById('date').value; TEMPLATE FOR DATE
+        window.location = social + tag;
+    }
   block content
 
-    | Insert the hashtag you want to search
+    | Write the search parameter and click the Social platform you want to search
     br
-    input(type='text', name='hashtag')
+    input(type='text', id='hashtag')
     br
-    button(type='button', onclick='history.go(0)') Search
+    button(class='twitter', onclick="pageLoader()") Twitter
+    br
+    button(class='facebook', onclick="pageLoader()") Facebook
+    br
+    button(class='youtube', onclick="pageLoader()") Youtube
+
+include ../base/footer

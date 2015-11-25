@@ -11,9 +11,12 @@
     "cookie-parser": "^1.3.3",
     "express": "^4.13.3",
     "jade": "^1.11.0",
+    "method-override": "^2.3.5",
     "mongoose": "^4.2.5",
     "morgan": "^1.6.1",
-    "serve-favicon": "^2.3.0"
+    "oauth": "^0.9.14",
+    "request": "^2.67.0",
+    "serve-favicon": "^2.3.0",
   },
   "devDependencies": {
     "gulp": "^3.9.0",
@@ -22,8 +25,8 @@
     "gulp-livereload": "^3.8.0",
     "gulp-nodemon": "^2.0.2",
     "gulp-plumber": "^1.0.0",
-    "gulp-shorthand": "^1.1.0",
-    "gulp-stylus": "^2.0.0"
+    "gulp-sass": "^2.1.0",
+    "gulp-shorthand": "^1.1.0"
   },
   "repository": {
     "type": "git",
@@ -36,23 +39,28 @@
     "twitter",
     "yt"
   ],
-  "authors": [{
-    "name": "Fraccaroli Gianmarco",
-    "email": "fraccg@usi.ch",
-    "url": "https://github.com/Fraccaman"
-  }, {
-    "name": "Cruz Alegría Samuel Adolfo",
-    "email": "cruzas@usi.ch",
-    "url": "https://github.com/cruzas"
-  }, {
-    "name": "Arrigo Francesco Simone",
-    "email": "arrigf@usi.ch",
-    "url": "https://github.com/framtk"
-  }, {
-    "name": "Calzana Marco",
-    "email": "calzam@usi.ch",
-    "url": "https://github.com/calzam"
-  }],
+  "authors": [
+    {
+      "name": "Fraccaroli Gianmarco",
+      "email": "fraccg@usi.ch",
+      "url": "https://github.com/Fraccaman"
+    },
+    {
+      "name": "Cruz Alegría Samuel Adolfo",
+      "email": "cruzas@usi.ch",
+      "url": "https://github.com/cruzas"
+    },
+    {
+      "name": "Arrigo Francesco Simone",
+      "email": "arrigf@usi.ch",
+      "url": "https://github.com/framtk"
+    },
+    {
+      "name": "Calzana Marco",
+      "email": "calzam@usi.ch",
+      "url": "https://github.com/calzam"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Fraccaman/USI-Social-Wall/issues"

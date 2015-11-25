@@ -6,17 +6,20 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var methodOverride = require('method-override')
 var router = express.Router();
 
 // Connect to MongoDB here
-var mongoose   = require('mongoose');
-mongoose.connect(config.mongoUrl + config.mongoDbName);
+// var mongoose   = require('mongoose');
+// mongoose.connect(config.mongoUrl + config.mongoDbName);
 
+var app = express();
 
-// WE NEED TO CHANGE THIS
-app.get('/', function(req, res) {
-  res.render('partials/index', { title: 'Usi Social-Wall' });
-});
+var routers = require('./routes/routers');
+app.use('/', routers.root);
+app.use('/twitter',routers.twitter);
+app.use('/twitter2',routers.twitter2);
+// app.use('/youtube',routers.youtube);
 
 var env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
@@ -33,17 +36,26 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
-// routes
+app.use(methodOverride(
+function(req, res){
+  if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+    var method = req.body._method
+    delete req.body._method
+    return method
+  }
+}
+));
+
 
 
 /// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
+// app.use(function(req, res, next) {
+//     var err = new Error('Not Found');
+//     err.status = 404;
+//     next(err);
+// });
 
 /// error handlers
 
@@ -70,11 +82,5 @@ app.use(function(err, req, res, next) {
         title: 'error'
     });
 });
-
-// var routers = require('./routes/routers');
-// app.use('/', routers.root);
-
-
-
 
 module.exports = app;

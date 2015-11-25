@@ -1,0 +1,32 @@
+#sidebar {
+  min-height: 675px;
+  width: 200px;
+  background-color: #43515b;
+  float: left;
+  #menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      padding:15px;
+      width: 100%;
+      a {
+        text-align: center;
+        color: #fff;
+        display: block;
+        i {
+          margin: auto;
+          padding-bottom: 10px;
+        }
+        p {
+          font-size: 15px;
+          font-weight: 400;
+          padding:0;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
