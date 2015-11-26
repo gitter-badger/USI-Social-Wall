@@ -13,7 +13,9 @@ router.all('/', middleware.supportedMethods('GET, OPTIONS'));
 //list users
 router.get('/', function(req, res, next) {
 
-  res.render('partials/dashboard');
+  res.render('partials/dashboard', {
+    activePage: 'settings'
+  });
 
 });
 /** router for /users */

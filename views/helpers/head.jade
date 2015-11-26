@@ -1,8 +1,10 @@
-block css
-  link(href='/components/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
-  link(href='/components/font-awesome/css/font-awesome.min.css', rel='stylesheet')
+extends ../base/header
+
+block append css
+  link(href='/components/normalize-css/normalize.css', rel='stylesheet')
+  link(href='/components/foundation-sites/dist/foundation.min.css', rel='stylesheet')
+  link(href='/components/foundation-icon-fonts//foundation-icons.css', rel='stylesheet')
   link(href='/css/style.css', rel='stylesheet')
   link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800")
-block js
+block append js
   script(type='text/javascript', src='http://localhost:35729/livereload.js')
-title  USI SOCIAL WALL
