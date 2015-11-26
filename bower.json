@@ -46,6 +46,7 @@
     "normalize-css": "normalize.css#~3.0.3",
     "font-awesome": "fontawesome#~4.4.0",
     "Chart.js": "~1.0.2",
-    "foundation-icon-fonts": "*"
+    "foundation-icon-fonts": "*",
+    "foundation-sites": "~6.0.4"
   }
 }
