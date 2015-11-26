@@ -1,11 +1,11 @@
 
 'use strict';
 
-var twitterRouter = require("../../../routes/twitter/router")
-
-
-
 module.exports.parseData = function(res, data, options){
-    twitterRouter.sendData(res, data);
+    console.log("middleOut2");
+
+    res.write(JSON.stringify(data));
+	res.end();
+	console.log("out");
 
 }

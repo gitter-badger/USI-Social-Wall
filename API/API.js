@@ -5,7 +5,6 @@
 
 var fs = require('fs');
 var API = {};
-console.log("API.js        ......         !!!!!!!!")
 
 //check the number of paramiters of the functions.
 // getJson must have 3 paramiters or more.

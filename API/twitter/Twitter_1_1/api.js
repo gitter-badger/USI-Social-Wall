@@ -36,9 +36,8 @@ module.exports.getJson = function(res, hashtag, options){
         }
 
       }, function (err, resp, body) {
+        Twitter_1_1.parseData(res, body, options);
         
-        Twitter_1_1.parseData(res, body,options);
-        console.log("out2")
 
       });
     });

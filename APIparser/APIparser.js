@@ -5,7 +5,6 @@
 
 var fs = require('fs');
 var APIparser = {};
-console.log("APIparser.js        ......         !!!!!!!!")
 
 //check the number of paramiters of the functions.
 // getJson must have 3 paramiters or more.
@@ -28,7 +27,6 @@ fs.readdirSync(__dirname).forEach(function(file) {
 
                 try{
                     var module = require(path + '/parser');
-                    console.log("heeeeei", module)
 
                     //chack the existens and the paramiters of the function getJson
                     // if (module.getJson && checkModule(module.getJson)) {
@@ -45,7 +43,6 @@ fs.readdirSync(__dirname).forEach(function(file) {
         });
     }
 });
-console.log(APIparser)
 module.exports = APIparser;
 
 

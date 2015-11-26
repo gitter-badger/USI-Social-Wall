@@ -30,14 +30,8 @@ router.get('/:hashtag', function (req, res, next) {
  		console.log("Twitter API version 1.1")
  		Twitter_1_1.getJson(res, hashtag, {})
  	}
+
 });
-
-module.exports.sendData = function(res, data){
-
-	// console.log(data.statuses[0].text)
-	res.write(JSON.stringify(data))
-	res.end();
-}
 
 
 

@@ -19,8 +19,9 @@ module.exports.getJson = function(res, hashtag, options){
 		config.twitter1.standardValue,
 		function (e, data, response) {
 			if (e) console.log(e)
+			console.log("middleOut1");
 			Twitter_1_0.parseData(res, JSON.parse(data),options);
-			console.log("out1")
+			
 		});
 
 }
