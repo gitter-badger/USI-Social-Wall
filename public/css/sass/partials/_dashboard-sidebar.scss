@@ -1,31 +1,44 @@
 #sidebar {
   min-height: 675px;
   width: 200px;
-  background-color: #43515b;
+  background-color: #34425A;
   float: left;
   #menu {
     list-style: none;
     padding: 0;
     margin: 0;
     li {
-      padding:15px;
+      padding:20px 0;
       width: 100%;
       a {
         text-align: center;
-        color: #fff;
+        font-weight: 400;
+        color: #899dc1;
         display: block;
         i {
+          font-size: 1.86em;
+          font-weight: 400;
           margin: auto;
           padding-bottom: 10px;
         }
         p {
-          font-size: 15px;
+          font-size: 1em;
           font-weight: 400;
-          padding:0;
+          margin: 15px 0 0 0;
+          padding: 0;
           &:hover {
             text-decoration: none;
           }
         }
+      }
+      &:hover {
+        background-color: #2b384e;
+      }
+      &:hover > a {
+        color: #fff;
+      }
+      ul{
+        margin:0;
       }
     }
   }
