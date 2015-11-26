@@ -31,3 +31,4 @@ public/components
 
 # git files
 *.orig
+config.js
