@@ -10,8 +10,8 @@ var methodOverride = require('method-override')
 var router = express.Router();
 
 // Connect to MongoDB here
-// var mongoose   = require('mongoose');
-// mongoose.connect(config.mongoUrl + config.mongoDbName);
+var mongoose   = require('mongoose');
+mongoose.connect(config.global.mongoUrl + config.global.mongoDbName);
 
 var app = express();
 
