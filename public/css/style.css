@@ -3,18 +3,20 @@ body {
   font-weight: 300;
   background-color: #ccc; }
 
-.active {
-  padding-top: 20px;
-  background-color: #34425A; }
+.active-li {
+  background-color: #2b384e;
+  color: #fff !important; }
 
 #navbar {
-  height: 70px; }
+  height: 70px;
+  max-width: 100%;
+  margin: 0; }
   #navbar #logo-box {
     width: 200px;
-    background-color: #0080FF;
+    background-color: #22baa0;
     float: left; }
     #navbar #logo-box #logo {
-      color: #fff;
+      color: #ffffff;
       font-size: 20px;
       font-weight: bold;
       line-height: 70px; }
@@ -22,7 +24,7 @@ body {
         text-decoration: none; }
   #navbar #navbar-menu {
     height: 70px;
-    background-color: #fff;
+    background-color: #ffffff;
     line-height: 70px;
     padding-right: 15px; }
     #navbar #navbar-menu span {
@@ -32,29 +34,35 @@ body {
 #sidebar {
   min-height: 675px;
   width: 200px;
-  background-color: #43515b;
+  background-color: #34425A;
   float: left; }
   #sidebar #menu {
     list-style: none;
     padding: 0;
     margin: 0; }
     #sidebar #menu li {
-      padding: 15px;
+      padding: 20px 0;
       width: 100%; }
       #sidebar #menu li a {
         text-align: center;
-        color: #fff;
+        font-weight: 400;
+        color: #899dc1;
         display: block; }
         #sidebar #menu li a i {
+          font-size: 1.86em;
+          font-weight: 400;
           margin: auto;
           padding-bottom: 10px; }
         #sidebar #menu li a p {
-          font-size: 15px;
+          font-size: 1em;
           font-weight: 400;
+          margin: 15px 0 0 0;
           padding: 0; }
           #sidebar #menu li a p:hover {
             text-decoration: none; }
-
-#content {
-  margin-left: 200px;
-  padding: 0; }
+      #sidebar #menu li:hover {
+        background-color: #2b384e; }
+      #sidebar #menu li:hover > a {
+        color: #fff; }
+      #sidebar #menu li ul {
+        margin: 0; }

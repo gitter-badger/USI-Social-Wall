@@ -1,31 +1,21 @@
 /** @module albums/router */
 'use strict';
 
-var express = require('express');
-var router = express.Router();
-var middleware = require('../middleware');
-var OAuth = require('oauth');
-var config = require("../../config");
 var R = require("request");
+var twitterExts = require("../APIclassForTwitter");
+var config = twitterExts.config;
+var OAuth = twitterExts.OAuth;
+var Twitter_1_1 = twitterExts.APIparser.Twitter_1_1;
 
-router.all('/', middleware.supportedMethods('GET, OPTIONS'));
 
-router.get('/', function (req, res, next) {
-  res.write('ciao twitter2')
-  res.end()
-})
 
-router.get('/:hashtag', function (req, res, next) {
-  var hashtag = req.params.hashtag
-  var OAuth2 = OAuth.OAuth2;
+module.exports.getJson = function(res, hashtag, options){
+  // var OAuth2 = OAuth.OAuth2;
   // var twitterConsumerKey = 'your key';
   // var twitterConsumerSecret = 'your secret';
-  var oauth2 = new OAuth2('ohb9GbS1FS1zGxwjz1LvF4sQR',
-    "Z3jc8wKNooT82QfMfQBkpoDegJGEcQnCwwKXfhh8iFauhe15F5",
-    'https://api.twitter.com/',
-    null,
-    'oauth2/token',
-    null);
+  console.log("enter2")
+  var oauth2 = config.twitter2.oauth2
+  
   oauth2.getOAuthAccessToken(
     '', {
       'grant_type': 'client_credentials'
@@ -46,15 +36,10 @@ router.get('/:hashtag', function (req, res, next) {
         }
 
       }, function (err, resp, body) {
-
-        res.json(resp)
+        Twitter_1_1.parseData(res, body, options);
+        
 
       });
     });
 
-});
-
-
-
-
-module.exports = router;
+};

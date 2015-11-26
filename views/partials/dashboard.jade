@@ -1,27 +1,41 @@
-include ../base/header
-  
-  block content
-    div#navbar.container-fluid
-      div.row.text-center
-        div#logo-box
-          a(href="/")#logo USI Social Wall
-        div#navbar-menu
-          span.pull-right Welcome to the USI Social Wall App!
+include ../helpers/head
+
+block content
+  div#navbar.row
+    div.text-center
+      div#logo-box
+        a(href="/")#logo USI Social Wall
+      div#navbar-menu
+        span.float-right Welcome to the USI Social Wall App!
+  div#main
     div#sidebar
-      ul#menu
+      ul#menu.vertical.menu(data-accordion-menu='')
         li#settings.box
-          a(href="/")
-            i.fa.fa-wrench.fa-2x
+          a
+            i.fi-wrench
             p Settings
-        li#api.box
-          a(onclick="renderAPI()")
-            i.fa.fa-database.fa-2x
-            p Api
-        li#graphs.box
-            a(href="/")
-                i.fa.fa-bar-chart.fa-2x
-                p Graphs
-    div#content.container-fluid
-    
+          li#api.box
+            a
+              i.fi-database
+              p Api
+            ul.menu.vertical.nested
+              li#twitter.box
+                a
+                  i.fi-social-twitter
+                  p Twitter
+              li#youtube.box
+                a
+                  i.fi-social-youtube
+                  p YouTube
+              li#facebook.box
+                a
+                  i.fi-social-facebook
+                  p Facebook
+          li#graphs.box
+            a
+              i.fi-graph-bar
+              p Graphs
+    div#content
+
     
 include ../base/footer

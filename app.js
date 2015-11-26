@@ -10,15 +10,14 @@ var methodOverride = require('method-override')
 var router = express.Router();
 
 // Connect to MongoDB here
-// var mongoose   = require('mongoose');
-// mongoose.connect(config.mongoUrl + config.mongoDbName);
+var mongoose   = require('mongoose');
+mongoose.connect(config.global.mongoUrl + config.global.mongoDbName);
 
 var app = express();
 
 var routers = require('./routes/routers');
 app.use('/', routers.root);
 app.use('/twitter',routers.twitter);
-app.use('/twitter2',routers.twitter2);
 // app.use('/youtube',routers.youtube);
 
 var env = process.env.NODE_ENV || 'development';
