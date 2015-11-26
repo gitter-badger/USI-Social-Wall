@@ -15,7 +15,7 @@ router.all('/', middleware.supportedMethods('GET'));
 router.get('/',function(req,res,next){
  res.render('partials/twitter')
 })
- 
+
 router.get('/:hashtag', function (req, res, next) {
 	var urlParts = url.parse(req.url, true);
 	var urlQuery = urlParts.query;
