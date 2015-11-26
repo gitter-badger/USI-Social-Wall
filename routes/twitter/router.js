@@ -10,7 +10,7 @@ var url = require('url');
 // var standardAPI = require("../../AxPI/twitter/API1-1")
 
 
-router.all('/', middleware.supportedMethods('GET, OPTIONS'));
+router.all('/', middleware.supportedMethods('GET'));
 
 router.get('/',function(req,res,next){
  res.render('partials/twitter')
