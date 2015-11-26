@@ -20,15 +20,16 @@ router.get('/:hashtag', function (req, res, next) {
 	var urlParts = url.parse(req.url, true);
 	var urlQuery = urlParts.query;
     var hashtag = req.params.hashtag;
+    console.log(API)
     if (urlQuery.version == '1.0'){
     	var Twitter_1_0 = API.Twitter_1_0;
     	console.log("Twitter API version 1.0")
- 		Twitter_1_0.getJson(res, hashtag, {});
+ 		Twitter_1_0.getJson(res, hashtag, urlQuery);
  	}
  	else{
  		var Twitter_1_1 = API.Twitter_1_1;
  		console.log("Twitter API version 1.1")
- 		Twitter_1_1.getJson(res, hashtag, {})
+ 		Twitter_1_1.getJson(res, hashtag, urlQuery)
  	}
 
 });

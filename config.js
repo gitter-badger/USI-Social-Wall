@@ -18,8 +18,8 @@ module.exports = {
 		oauth1 : new OAuth.OAuth(
 			'https://api.twitter.com/oauth/request_token',
 			'https://api.twitter.com/oauth/access_token',
-			'ohb9GbS1FS1zGxwjz1LvF4sQR',
-			'Z3jc8wKNooT82QfMfQBkpoDegJGEcQnCwwKXfhh8iFauhe15F5',
+			'SScxhrwxhutPMnEC5Yu6tLm6k',
+			'M3pNOZuq0OKhjLmWFp3lwO6lngq4Swt4vTbk9jbEYl236jEI3T',
 			'1.0A',
 			null,
 			'HMAC-SHA1'
@@ -31,8 +31,8 @@ module.exports = {
 	//oauth for Twitter API 1.1
 	twitter2 : {
 		oauth2 : new OAuth.OAuth2(
-			'ohb9GbS1FS1zGxwjz1LvF4sQR',
-    		"Z3jc8wKNooT82QfMfQBkpoDegJGEcQnCwwKXfhh8iFauhe15F5",
+			'SScxhrwxhutPMnEC5Yu6tLm6k',
+    		"M3pNOZuq0OKhjLmWFp3lwO6lngq4Swt4vTbk9jbEYl236jEI3T",
     		'https://api.twitter.com/',
 		    null,
 		    'oauth2/token',
